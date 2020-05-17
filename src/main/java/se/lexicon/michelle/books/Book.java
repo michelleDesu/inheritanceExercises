@@ -15,7 +15,11 @@ public abstract class Book {
         setYear(1970);
     }
     public Book(int pages) {
-        this.pages = pages;
+        setPages(pages);
+        setAuthor("Default");
+        setCategory("Default");
+        setTitle("Default");
+        setYear(1970);
     }
 
     public String getTitle() {
