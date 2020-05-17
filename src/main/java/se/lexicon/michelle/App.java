@@ -1,5 +1,6 @@
 package se.lexicon.michelle;
 
+import se.lexicon.michelle.CarBase.Cars;
 import se.lexicon.michelle.books.TeenageBook;
 import se.lexicon.michelle.iceCream.Chocolate;
 import se.lexicon.michelle.iceCream.IceCream;
@@ -20,7 +21,22 @@ public class App
     {
         //runVehicle();
         //runBooks();
-        runIceCream();
+        //runIceCream();
+        runCar();
+    }
+
+    private static void runCar() {
+
+        Cars car = new Cars("Volvo"),
+            car2 = new Cars("Ford"),
+            car3 = new Cars("Mazda"),
+            car4 = new Cars("Lamborghini");
+
+        car.Colour("Red");
+        car2.Colour("Green");
+        car3.Colour("Blue");
+        car4.Colour("Alpha");
+
     }
 
     private static void runIceCream(){

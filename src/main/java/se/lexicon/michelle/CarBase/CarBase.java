@@ -7,4 +7,8 @@ public class CarBase {
         this.carName = carName;
         System.out.println("This is " + carName);
     }
+
+    public String getCarName() {
+        return carName;
+    }
 }
