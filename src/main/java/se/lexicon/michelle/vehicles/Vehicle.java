@@ -1,24 +1,15 @@
 package se.lexicon.michelle.vehicles;
 
-public class Vehicle {
-    private String  type,
-                    brand,
-                    color;
+public abstract class Vehicle {
+    private String brand,
+                    colour;
     private int     nrOfWheels;
 
-    public Vehicle(String type, String brand, String color, int nrOfWheels) {
-        this.type = type;
+    public Vehicle( String brand, String colour, int nrOfWheels) {
+
         this.brand = brand;
-        this.color = color;
+        this.colour = colour;
         this.nrOfWheels = nrOfWheels;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 
     public String getBrand() {
@@ -30,11 +21,11 @@ public class Vehicle {
     }
 
     public String getColour() {
-        return color;
+        return colour;
     }
 
     public void setColour(String color) {
-        this.color = color;
+        this.colour = color;
     }
 
     public int getNrOfWheels() {
@@ -44,4 +35,6 @@ public class Vehicle {
     public void setNrOfWheels(int nrOfWheels) {
         this.nrOfWheels = nrOfWheels;
     }
+
+    public abstract String drive();
 }
