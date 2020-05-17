@@ -80,6 +80,32 @@ public class TeenageBookTest {
     }
 
     @Test
+    public void given_existing_title_TestSearchTeenageBook(){
+        TeenageBook testBook = new TeenageBook(
+                "how to not write classes",
+                "Michelle Johansson",
+                "child book",
+                2020,
+                100
+        );
+        storyBooks.addTeenBook(testBook);
+        String expected = testBook.toString();
+        String actual = storyBooks.SearchTeenageBook("how to not write classes");
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void given_nonExisting_title_TestSearchTeenageBook(){
+
+
+        String expected = "Book does not exist!\n";
+        String actual = storyBooks.SearchTeenageBook("how to not write classes");
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void testToString() {
 
         String expected = "title: " + teenageBook.getTitle() + "\n" +
@@ -91,6 +117,8 @@ public class TeenageBookTest {
         System.out.println(teenageBook.toString());
         assertEquals(expected, teenageBook.toString());
     }
+
+
 
     @Test
     public void testEquals_and_hashcode() {
@@ -106,4 +134,6 @@ public class TeenageBookTest {
         assertEquals(expected.hashCode(), teenageBook.hashCode());
 
     }
+
+
 }

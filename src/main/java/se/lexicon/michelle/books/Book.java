@@ -14,6 +14,7 @@ public abstract class Book {
         setTitle("Default");
         setYear(1970);
     }
+
     public Book(int pages) {
         setPages(pages);
         setAuthor("Default");

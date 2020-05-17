@@ -1,8 +1,11 @@
 package se.lexicon.michelle;
 
+import se.lexicon.michelle.books.TeenageBook;
 import se.lexicon.michelle.vehicles.Car;
 import se.lexicon.michelle.vehicles.Motorcycle;
 import se.lexicon.michelle.vehicles.Truck;
+
+import java.util.Scanner;
 
 /**
  * Hello world!
@@ -12,7 +15,35 @@ public class App
 {
     public static void main( String[] args )
     {
-        runVehicle();
+        //runVehicle();
+        runBooks();
+    }
+
+    private static void runBooks(){
+        TeenageBook teenageBook,
+                storyBooks;
+        Scanner scanner = new Scanner(System.in);
+        teenageBook = new TeenageBook(
+                "Äppelträdet",
+                "Olle sandberg",
+                "teenage book",
+                2017,
+                55
+        );
+
+        storyBooks = new TeenageBook(
+                "Samlade Sagor",
+                "Michelle Johansson",
+                "teenage book",
+                2020,
+                teenageBook.getPages()
+        );
+        storyBooks.addTeenBook(teenageBook);
+
+        System.out.println("Print the title of the teenage book you want to find: ");
+        String answer = scanner.nextLine();
+        System.out.println(storyBooks.SearchTeenageBook(answer));
+
     }
 
     private static void runVehicle(){
