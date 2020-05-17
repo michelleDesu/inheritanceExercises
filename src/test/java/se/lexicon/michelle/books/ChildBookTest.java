@@ -6,8 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class ChildBookTest {
-    ChildBook
-                childBook;
+    ChildBook childBook;
     ChildBook   storyBooks;
 
     @Before
