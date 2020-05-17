@@ -1,6 +1,9 @@
 package se.lexicon.michelle;
 
 import se.lexicon.michelle.books.TeenageBook;
+import se.lexicon.michelle.iceCream.Chocolate;
+import se.lexicon.michelle.iceCream.IceCream;
+import se.lexicon.michelle.iceCream.Vanilla;
 import se.lexicon.michelle.vehicles.Car;
 import se.lexicon.michelle.vehicles.Motorcycle;
 import se.lexicon.michelle.vehicles.Truck;
@@ -16,7 +19,19 @@ public class App
     public static void main( String[] args )
     {
         //runVehicle();
-        runBooks();
+        //runBooks();
+        runIceCream();
+    }
+
+    private static void runIceCream(){
+        IceCream ice = new IceCream();
+        Chocolate chocolate = new Chocolate();
+        Vanilla vanilla = new Vanilla();
+
+        ice.description();
+        chocolate.description();
+        vanilla.description();
+
     }
 
     private static void runBooks(){
